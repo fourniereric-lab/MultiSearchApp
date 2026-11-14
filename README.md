@@ -1,6 +1,19 @@
 # 🔍 MultiSearch v2.0 — Application de Recherche Multi-Moteur
 
-Application de bureau **Windows 10/11** développée en **WinUI 3 / C#** permettant de lancer simultanément des recherches sur 27 moteurs de recherche, chacun s'affichant dans son propre onglet WebView2 intégré.
+Application de recherche multi-moteur disponible sur **Windows 10/11** (WinUI 3) et **Android** (.NET MAUI). L’application Android affiche les résultats dans une WebView intégrée et permet de passer d’un moteur sélectionné à un autre.
+
+## 📱 Android
+
+Le projet Android est séparé du projet WinUI afin de conserver la version Windows inchangée. Il reprend les moteurs, la sélection multiple, l’historique et les favoris (conservés en mémoire pendant la session).
+
+Prérequis : .NET SDK 10 avec la charge de travail **.NET MAUI / Android**, et un émulateur Android ou un appareil connecté.
+
+```bash
+dotnet workload install maui-android
+dotnet build Android/MultiSearchApp.Android.csproj -f net10.0-android
+```
+
+Dans Visual Studio, ouvrez `Android/MultiSearchApp.Android.csproj`, choisissez un appareil ou un émulateur Android, puis lancez l’application. La permission d’accès Internet est déclarée dans le manifeste Android.
 
 ---
 
